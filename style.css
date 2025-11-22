@@ -1,0 +1,1033 @@
+/*ROOT VARIABLES & GLOBAL SETTINGS*/
+:root {
+    background-color: white;
+    --text: black;
+    --font-bebas: "Bebas Neue", sans-serif;
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+}
+
+/*HEADER STYLING*/
+header {
+    background-color: white;
+    display: flex; /* Aligns items horizontally */
+    position: relative;
+}
+
+/*NAVIGATION BAR*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px; /* Adds spacing inside nav bar */
+    font-family: var(--font-bebas);
+    color: var(--text);
+}
+
+/*GLOBAL BODY STYLING*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/*LOGO SECTION*/
+.logo {
+    float: left; /* Pushes logo to left side */
+    margin: 5px 0;
+}
+
+.logo img {
+    width: 80px; /* Sets logo size */
+    height: auto;
+    display: block; /* Removes extra space below image */
+}
+
+/*NAV-LINKS SECTION*/
+.nav-links a {
+    display: inline-block;
+    text-decoration: none; /* Removes underline */
+    margin: 0 15px; /* Spacing between each link */
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.3s ease; /* Smooth hover animation */
+}
+
+.nav-links a:hover {
+    color: #fd93cd;
+}
+
+/*ICONS (PROFILE + CART)*/
+.icons {
+    position: absolute; /* Positions icons independently of nav flow */
+    right: 20px; /* Pushes icons to the right side of navbar */
+    display: inline-block;
+    gap: 35px; /* Space between icons*/
+    cursor: pointer; /* Shows hand cursor on hover */
+}
+
+.icons a {
+    margin-left: 20px;
+    color: black;
+}
+
+.icons .material-icons-outlined {
+    font-size: 20px; /* Sets icon size */
+    transition: color 0.3s; /* Smooth color change */
+}
+
+.icons .material-icons-outlined:hover {
+    color: #fd93cd;
+}
+
+/*PROFILE ICON + DROPDOWN CONTAINER*/
+.profile-menu {
+    position: relative; /* dropdown position under icon */
+    display: inline-block;
+}
+
+/* DROPDOWN MENU (HIDDEN BY DEFAULT) */
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 130px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    border-radius: 8px; /* Rounded corners */
+    z-index: 10; /* Ensures it appears above other items */
+}
+
+/* LOGOUT BUTTON STYLE */
+#logoutBtn {
+    display: none; /* Only shows when user is logged in */
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+    background-color: white;
+    border: none;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s; /* Smooth hover effect */
+}
+
+#logoutBtn:hover {
+    background-color: #fd93cd;
+}
+
+/*SHOP DROPDOWN (NAVIGATION BAR)*/
+.Shop-options {
+    position: relative;
+    display: inline-block;
+}
+/* Show dropdown when hovering over link */
+.Shop-options:hover .dropdown {
+    display: block;
+}
+
+/*SHOW DROPDOWN WHEN HOVERING PROFILE*/
+.profile-menu:hover .dropdown {
+    display: block;
+}
+
+/* DROPDOWN LINK STYLE */
+.dropdown a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none; /* Removes underline */
+    color: black;
+    font-size: 14px;
+    transition: background 0.3s;
+    margin: 0; /* Removes extra spacing */
+}
+
+/* Hover effect for links */
+.dropdown a:hover {
+    background-color: #fd93cd;
+    color: black;
+}
+
+/*HOME PAGE STYLES*/
+.home {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* make it responsive */
+    overflow: hidden; /* Hides overflowing content */
+}
+
+.home img {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes extra space below image */
+}
+
+/*SHOP NOW BUTTON ON BANNER*/
+.shop-btn {
+    position: absolute; /* Positioned over image */
+    top: 70%;
+    left: 30%;
+    background-color: black;
+    color: white;
+    font-family: var(--font-bebas);
+    padding: 12px 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.shop-btn:hover {
+    background-color: #fd93cd;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    transform: scale(1.05); /* slight zoom effect */
+}
+
+/*SHOP CATEGORY OPTIONS*/
+.options {
+    overflow-x: auto; /* horizontal scroll on small screens */
+    text-align: center;
+    padding: 5px 0;
+    display: flex; /* Displays categories in a row */
+}
+
+.options img {
+    width: 95%;
+    min-width: 150px; /* Prevents images from being too small */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.options img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/*WHY US SECTION*/
+.whyus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* space between image and text */
+    padding: 20px 10%;
+    background-color: white;
+}
+
+.whyus img {
+    width: 700px;
+    height: auto;
+}
+
+.whytext {
+    margin-bottom: 90px;
+    text-align: center;
+    max-width: 500px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.whytext h2 {
+    font-family: var(--font-montserrat);
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: var(--text);
+}
+
+.whytext p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Make it responsive */
+@media (max-width: 800px) {
+    .whyus {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+
+    .whyus img {
+        width: 80%; /* Adjust image size on smaller screens */
+    }
+}
+
+.whytext .shop-btn {
+    position: static; /* remove absolute positioning */
+    display: inline-block; /* so it stays in flow under the text */
+    margin-top: 20px; /* spacing above the button */
+    padding: 10px 45px;
+    font-family: var(--font-bebas);
+    background-color: rgb(253, 147, 205); /* pink theme */
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.whytext .shop-btn:hover {
+    background-color: rgb(255, 0, 123); /* Darker pink on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*BESTSELLER PRODUCT IMAGE*/
+.bestseller img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+/*BESTSELLER CONTAINER*/
+.bestseller-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/*BESTSELLER SECTION TITLE*/
+.bestsellers-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/*  INDIVIDUAL BESTSELLER CARD*/
+.bestseller {
+    padding: 10 6px;
+    float: left;
+    width: 20%;
+}
+
+/* FOLLOW US SECTION*/
+.followus img {
+    width: 100%;
+    height: 100;
+    object-fit: cover; /* keeps aspect ratio while covering */
+    display: block;
+}
+
+.follow-img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.follow-text {
+    position: absolute;
+    top: 50%; /* adjust to match the perfect position on the image */
+    left: 70%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.follow-text h2 {
+    font-family: var(--font-bebas);
+    font-size: 58px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.follow-text p {
+    font-family: var(--font-montserrat);
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/*INSTAGRAM BUTTON*/
+.insta-btn {
+    display: inline-block;
+    background-color: #fd93cd;
+    color: white;
+    font-family: var(--font-montserrat);
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.insta-btn:hover {
+    background-color: white;
+    color: #fd93cd;
+    border: 2px solid #fd93cd;
+}
+
+/* popup */
+.popup {
+    display: none; /* hidden by default */
+    position: fixed; /* Stays in place when scrolling */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* translucent black */
+}
+
+/* popup box */
+.popup-content {
+    background: white;
+    width: 320px;
+    margin: 5% auto; /* Centers the popup*/
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    font-family: var(--font-montserrat);
+    animation: fadeIn 0.3s ease;
+}
+
+/* CLOSE BUTTON */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.close:hover {
+    color: #fd93cd;
+}
+
+/*POPUP BUTTONS (LOGIN / REGISTER)*/
+.popup-buttons {
+    margin-top: 20px;
+}
+.popup-btn {
+    display: inline-block;
+    background-color: #fd93cd;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.popup-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+/* register text */
+.register-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.register-text a {
+    color: #fd93cd;
+    text-decoration: none;
+    font-weight: 600;
+}
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styling */
+.form-box input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: var(--font-montserrat);
+}
+/* Forgot Password */
+.forgot-pass {
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.forgot-pass a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.forgot-pass a:hover {
+    text-decoration: underline;
+}
+
+/* Register / Login link text */
+.register-text {
+    margin-top: 15px;
+    font-size: 14px;
+}
+/*TERMS & CONDITIONS LABEL*/
+.terms-label {
+    display: block;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px); /* Start slightly above final position */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Slide to final position */
+    }
+}
+
+/*FOOTER STYLING*/
+.footer {
+    background-color: #fd93cd;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-family: var(--font-montserrat);
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/*FAQ*/
+.faq {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: auto; /* adjust height */
+}
+
+.faq img {
+    width: 100%;
+    height: 100;
+    object-fit: cover; /* keeps aspect ratio while covering */
+    display: block;
+}
+
+/* FAQ container */
+.faq-container {
+    max-width: 800px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.faq-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Styling each FAQ box */
+.faq-container details {
+    background: white;
+    font-family: var(--font-poppins);
+    margin-bottom: 12px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    transition: background 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-container details:hover {
+    background: rgb(251, 224, 234);
+}
+
+.faq-container summary {
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* show + */
+.faq-container summary::after {
+    content: "+";
+    font-size: 14px;
+    transition: transform 0.3s ease;
+    font-weight: 600;
+}
+
+/* show - when open */
+.faq-container details[open] summary::after {
+    content: "-";
+    font-size: 14px;
+    transition: transform 0.3s ease;
+    font-weight: 600;
+}
+
+/* Smooth opening animation */
+.faq-container details p {
+    margin-top: 10px;
+    line-height: 1.5;
+    animation: fadeSlide 0.3s ease;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*ABOUT PAGE CONTAINER*/
+.about-container {
+    max-width: 900px;
+    margin: 60px auto; /* Center container*/
+    padding: 20px;
+    text-align: center;
+    font-family: var(--font-poppins);
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/*ABOUT PAGE HEADING*/
+.about-container h1 {
+    color: #fd93cd;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+/*STUDENT INFO & CONTACT SECTIONS*/
+.student-info,
+.contact-us {
+    text-align: left;
+    margin-top: 30px;
+    background-color: #ffe6f3;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.student-info ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+}
+
+.student-info li {
+    margin: 8px 0;
+}
+/*EMAIL LINK STYLING*/
+.email-link {
+    color: #fd93cd;
+    text-decoration: none; /* Remove underline */
+    font-weight: 600;
+}
+
+.email-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/*SHOP PAGE*/
+.shop-container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap products onto new lines */
+    justify-content: center;
+    gap: 25px; /* Space between products */
+    padding: 40px 20px;
+}
+
+/*INDIVIDUAL PRODUCT CARD*/
+.product {
+    width: 220px;
+    text-align: center;
+}
+
+/* Product Images */
+.product img {
+    width: 100%;
+    height: 260px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    object-fit: cover; /* crop photo instead of stretching */
+}
+
+.product img:hover {
+    transform: scale(1.45); /* Enlarges image on hover */
+}
+
+/* Product Title */
+.product h3 {
+    font-family: var(--font-bebas);
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+/* Product Price & Description */
+.product p {
+    font-size: 15px;
+}
+
+/* ADD TO CART BUTTON*/
+.add-to-cart {
+    background: black;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    border: none;
+    padding: 10px 25px; /* Button size */
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-to-cart:hover {
+    background: #e91e63;
+}
+
+/*CART PAGE MAIN CONTAINER*/
+.cart-container {
+    width: 90%;
+    margin: 40px auto;
+}
+
+/*CART PAGE TITLE STYLE*/
+.cart-title {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/*CONTAINER HOLDING ALL CART ITEMS*/
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*INDIVIDUAL CART ITEM CARD  */
+.cart-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*CART ITEM IMAGE */
+.cart-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-right: 20px; /* spacing between image & text */
+}
+
+/*CART ITEM TEXT DETAILS */
+.cart-item-details h2 {
+    margin: 0;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 22px;
+}
+
+/* ITEM DESCRIPTION TEXT*/
+.cart-item-details p {
+    margin: 5px 0;
+}
+
+/*REMOVE BUTTON FOR CART ITEMS */
+.remove-btn {
+    background: #e91e63;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto; /* pushes button to the far right */
+    transition: 0.3s;
+}
+
+.remove-btn:hover {
+    background: black;
+}
+
+/* CART TOTAL PRICE  */
+.cart-total {
+    text-align: right;
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* CHECKOUT BUTTON*/
+.checkout-btn {
+    display: block;
+    width: fit-content;
+    margin-top: 20px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    padding: 12px 40px;
+    border-radius: 10px;
+    font-family: "Bebas Neue", sans-serif;
+    transition: 0.3s;
+}
+
+.checkout-btn:hover {
+    background: #fd93cd;
+}
+
+.checkout-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 16px;
+}
+
+.checkout-flex {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Left column (SHIPPING&PAYMENT) */
+.checkout-left {
+    flex: 2;
+    min-width: 300px;
+}
+
+/* Right column (Cart Summary) */
+.cart-summary {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-summary h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px; /* spacing below the header */
+    color: #fd93cd;
+    font-family: var(--font-bebas);
+}
+
+/* Checkout Container */
+.checkout-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-montserrat);
+    display: flex;
+    gap: 20px;
+    flex: 2;
+    flex-wrap: wrap;
+}
+
+/* CHECKOUT PAGE TITLE   */
+.checkout-container h1 {
+    text-align: center;
+    font-family: var(--font-bebas);
+    font-size: 36px;
+    width: 100%;
+    margin-bottom: 30px;
+    color: #fd93cd;
+}
+
+/* Checkout Cart Items */
+.checkout-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.checkout-item img {
+    width: 120px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.checkout-item-details h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.checkout-item-details p {
+    margin: 3px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Checkout Summary */
+.checkout-total {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.checkout-total p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.checkout-total h3 {
+    font-size: 22px;
+    margin-top: 10px;
+    color: #fd93cd;
+}
+/*PAYMENT OPTIONS IMAGE*/
+.payment-image {
+    width: 140px; /* controls size */
+    height: auto;
+    display: block;
+    margin-left: auto;
+}
+
+/* Shipping Form */
+#checkout-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#checkout-form input {
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+/*CHECKOUT FORM HEADER*/
+#checkout-form h2 {
+    font-family: var(--font-bebas);
+    font-size: 24px;
+    color: #fd93cd;
+    margin-bottom: 15px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: 1;
+}
+
+/* CHECKOUT OPTION Buttons */
+.checkout-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.checkout-buttons button {
+    padding: 12px 25px;
+    font-family: var(--font-bebas);
+    font-size: 16px;
+    background-color: #fd93cd;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.checkout-buttons button:hover {
+    background-color: #e57abf;
+}
+
+/*SHIPPING PAGE*/
+.shipping-page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-poppins);
+}
+
+/*SHIPPING HEADER*/
+.shipping-info h1 {
+    text-align: center;
+    color: #fd93cd;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+/*SHIPPING PAGE SECTION HEADERS*/
+.shipping-info h2 {
+    color: black;
+    margin-top: 25px;
+    font-family: var(--font-bebas);
+}
+
+/*BULLET LIST*/
+.shipping-info ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: black;
+    font-family: sans-serif;
+}
+
+/*PARAGRAPH TEXT*/
+.shipping-info p {
+    color: black;
+    line-height: 1.6;
+    font-family: sans-serif;
+}
+
+/*LINKS ON SHIPPING PAGE*/
+.shipping-info a {
+    color: #fd93cd;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/*FREE SHIPPING BANNER IMAGE*/
+.BANNER img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/*REFERENCE PAGE CONTAINER*/
+.reference-page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-poppins);
+}
+
+.reference-page h1{
+   text-align: center;
+   color: #fd93cd;
+}
+
+/*REFERENCE LIST STYLE*/
+.reference-list {
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    list-style: none; /* Remove default bullets */
+     line-height: 2; /* DOUBLE SPACING */
+}
+
+.reference-list li {
+    margin-bottom: 10px;
+    text-indent: -24px; /* negative indent for hanging */
+    padding-left: 25px; /* space for first line */
+}
