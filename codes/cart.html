@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- Ensures proper scaling on mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Website title-->
+        <title>CART</title>
+        <!--Stylesheet-->
+        <link rel="stylesheet" href="../style.css" />
+        <!--JAVASCRIPT FILE-->
+        <script src="../script.js" defer></script>
+        <!-- Google Material Icons (Outlined) -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=person"
+             rel="stylesheet"
+        />
+        <!-- Google Fonts-->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <!-- Logo Section -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../assets/logo.png" alt="Logo" />
+                    </a>
+                </div>
+                <!-- Main Navigation Links -->
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About us</a>
+                    <a href="about.html#contact">Contact</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="shipping.html">Shipping</a>
+                    <!-- Shop Menu With Dropdown -->
+                    <div class="Shop-options">
+                        <!-- Shop Dropdown list -->
+                        <a href="#">Shop &#9662;</a>
+                        <div class="dropdown">
+                            <a href="bundles.html">Bundles</a>
+                            <a href="wig.html">Wigs</a>
+                            <a href="closures.html">Closures</a>
+                            <a href="accessories.html">Accessories</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Icon Section (Profile & Cart) -->
+                <div class="icons">
+                    <!-- User Profile Menu -->
+                    <div class="profile-menu">
+                        <span class="material-icons-outlined" id="profileIcon">person</span>
+                        <!-- Profile dropdown for Login/Register/Logout -->
+                        <div class="dropdown">
+                            <a href="#" id="dropdownLogin">Login</a>
+                            <a href="#" id="dropdownRegister">Register</a>
+                            <span id="userStatus"></span>
+                            <!-- Logout button (hidden until logged in) -->
+                            <button id="logoutBtn" onclick="logoutUser()" style="display: none">Logout</button>
+                        </div>
+                    </div>
+                    <!-- Cart Icon -->
+                    <a href="cart.html" title="View Cart"><span class="material-icons-outlined">shopping_bag</span></a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+             <!-- CART CONTAINER-->
+            <section class="cart-container">
+                <!-- Page Title -->
+                <h1 class="cart-title">Your Cart</h1>
+
+                <!-- Cart items will be injected here by JS -->
+                <div class="cart-items" id="cart-items"></div>
+
+                <!-- Cart summary -->
+                <div class="cart-summary">
+                    <p>Subtotal: $<span id="subtotal">0.00</span></p>
+                    <p>Discount (10%): -$<span id="discount">0.00</span></p>
+                    <p>Tax (15%): $<span id="tax">0.00</span></p>
+                    <h3>Total: $<span id="total">0.00</span></h3>
+                </div>
+
+                 <!-- CHECKOUT BUTTON: Takes user to checkout page -->
+                <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- Ensures proper scaling on mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Website title-->
+        <title>ALLPRODUCTS</title>
+        <!--Stylesheet-->
+        <link rel="stylesheet" href="../style.css" />
+        <!--JAVASCRIPT FILE-->
+        <script src="../script.js" defer></script>
+        <!-- Google Material Icons (Outlined) -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=person"
+             rel="stylesheet"
+        />
+        <!-- Google Fonts-->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <!-- Logo Section -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../assets/logo.png" alt="Logo" />
+                    </a>
+                </div>
+                <!-- Main Navigation Links -->
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About us</a>
+                    <a href="about.html#contact">Contact</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="shipping.html">Shipping</a>
+                    <!-- Shop Menu With Dropdown -->
+                    <div class="Shop-options">
+                        <!-- Shop Dropdown list -->
+                        <a href="#">Shop &#9662;</a>
+                        <div class="dropdown">
+                            <a href="bundles.html">Bundles</a>
+                            <a href="wig.html">Wigs</a>
+                            <a href="closures.html">Closures</a>
+                            <a href="accessories.html">Accessories</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Icon Section (Profile & Cart) -->
+                <div class="icons">
+                    <!-- User Profile Menu -->
+                    <div class="profile-menu">
+                        <span class="material-icons-outlined" id="profileIcon">person</span>
+                        <!-- Profile dropdown for Login/Register/Logout -->
+                        <div class="dropdown">
+                            <a href="#" id="dropdownLogin">Login</a>
+                            <a href="#" id="dropdownRegister">Register</a>
+                            <span id="userStatus"></span>
+                            <!-- Logout button (hidden until logged in) -->
+                            <button id="logoutBtn" onclick="logoutUser()" style="display: none">Logout</button>
+                        </div>
+                    </div>
+                    <!-- Cart Icon -->
+                    <a href="cart.html" title="View Cart"><span class="material-icons-outlined">shopping_bag</span></a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- PRODUCT SECTION-->
+        <section class="shop-container">
+            <!-- Individual product card -->
+            <div class="product">
+                 <!-- Product image -->
+                <img src="../assets/black-green.jpg" alt="Green with black roots" />
+                 <!-- Product name -->
+                <h3>Emerald Luxe Bundles</h3>
+                 <!-- Product description -->
+                <p>deep emerald tones and sleek black roots — bold, radiant, and irresistibly soft.</p>
+                <!-- Product price -->
+                <p>$52.99</p>
+                <!-- Add to cart button-->
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Emerald Luxe Bundles', 52.99, '../assets/black-green.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/red.jpg" alt="Ruby Flame Bundles" />
+                <h3>Red Ruby Flame Bundles</h3>
+                <p>Ignite your look with a fiery red finish — perfect for confident queens who love to stand out.</p>
+                <p>$61.99</p>
+                <button class="add-to-cart" onclick="addToCart('Red Ruby Flame Bundles', 61.99, '../assets/red.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/blonde.jpg" alt="Golden Aura Bundles" />
+                <h3>Golden Aura Bundles</h3>
+                <p>Shine bright with smooth platinum tones and silky texture — the ultimate blonde perfection.</p>
+                <p>$66.49</p>
+                <button class="add-to-cart" onclick="addToCart('Golden Aura Bundles', 66.49, '../assets/blonde.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/orangebund.jpg" alt="Amber Glow Bundles" />
+                <h3>Amber Glow Bundles</h3>
+                <p>
+                    Bold and captivating — fiery amber shades that turn heads while keeping your style sleek and
+                    elegant.
+                </p>
+                <p>$69.99</p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Amber Glow Bundles', 69.99, '../assets/orangebund.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/curlybund.jpg" alt=" Cocoa Curls Bundles" />
+                <h3>Cocoa Curls Bundles</h3>
+                <p>
+                    Soft, bouncy waves with a natural “S” pattern that blends beautifully with most hair textures.
+                    Perfect for a voluminous, glamorous look that holds curls.
+                </p>
+                <p>$72.49</p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Cocoa Curls Bundles', 72.49, '../assets/curlybund.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/blue.jpg" alt=" Ocean Dream Bundles" />
+                <h3>Ocean Dream Bundles</h3>
+                <p>Deep sapphire hues flow like waves — bold, silky, and lightweight.</p>
+                <p>$74.99</p>
+                <button class="add-to-cart" onclick="addToCart('Ocean Dream Bundles', 74.99, '../assets/blue.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/silver.jpg" alt=" Silver Mirage Bundles" />
+                <h3>Silver Mirage Bundles</h3>
+                <p>A shimmering silver masterpiece — perfect for elegant evenings or modern, edgy looks.</p>
+                <p>$77.99</p>
+                <button class="add-to-cart" onclick="addToCart('Silver Mirage Bundles', 77.99, '../assets/silver.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/pink.jpg" alt=" Cotton Candy Curls Bundles" />
+                <h3>Cotton Candy Curls Bundles</h3>
+                <p>Pink curls full of bounce and fun — sweet, soft.</p>
+                <p>$68.99</p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Cotton Candy Curls Bundles', 68.99, '../assets/pink.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/curly2bund.jpg" alt=" Velvet Wave Bundles" />
+                <h3>Velvet Wave Bundles</h3>
+                <p>Soft cascading waves with a glossy finish — natural volume.</p>
+                <p>$71.49</p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Velvet Wave Bundles', 71.99, '../assets/curly2bund.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/purple.jpg" alt=" Violet Sunrise Bundles" />
+                <h3>Violet Sunrise Bundles</h3>
+                <p>
+                    Luxurious and bold — this deep royal purple bundle radiates confidence and creativity. Perfect for
+                    anyone who loves a rich, statement look with a smooth, silky texture.
+                </p>
+                <p>$74.99</p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Violet Sunrise Bundles', 76.99, '../assets/purple.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/firefront.jpg" alt="Anastasia Fire Red lace front" />
+                <h3>Anastasia Fire Red Lace front</h3>
+                <p>
+                    Get bold and beautiful with our fiery red set. Soft, silky, and easy to style — perfect for any
+                    occasion.
+                </p>
+                <p>$304.99</p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Anastasia Fire Red Lace front', 304.99, '../assets/firefront.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/caramel.jpg" alt="caramel lace Wig" />
+                <h3>caramel drip Wig</h3>
+                <p>
+                    Warm caramel tones with a silky, natural flow — perfect for a soft, sunlit glow that flatters every
+                    skin tone.
+                </p>
+                <p>$459.99</p>
+                <button class="add-to-cart" onclick="addToCart('Caramel Drip Wig', 459.99, '../assets/caramel.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/blondelace.jpg" alt="crystal blonde Wig" />
+                <h3>crystal blonde lace front</h3>
+                <p>
+                    A luminous blonde masterpiece that adds instant radiance and confidence — smooth, sleek, and ready
+                    to style.
+                </p>
+                <p>$464.99</p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Crystal Blonde Lace front', 464.99, '../assets/blondelace.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/blackshortlace.jpg" alt="black lace" />
+                <h3>Midnight Sleek</h3>
+                <p>Deep black shine meets flawless straight texture — your go-to for a polished, timeless look.</p>
+                <p>$369.99</p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Midnight Sleek', 369.99, '../assets/blackshortlace.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/locs.jpg" alt=" blonde locs Wig" />
+                <h3>blonde faux locs Wig</h3>
+                <p>
+                    Golden locs with natural volume and bounce — a carefree, radiant look that blends elegance and edge.
+                </p>
+                <p>$274.99</p>
+                <button class="add-to-cart" onclick="addToCart('Blonde Faux Locs Wig', 74.99, '../assets/locs.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/pinklace.jpg" alt=" pink Wig" />
+                <h3>candy straight Wig</h3>
+                <p>
+                    Sweet, bold, and fun — pastel pink tones that make a statement while keeping things silky and
+                    manageable.
+                </p>
+                <p>$274.99</p>
+                <button class="add-to-cart" onclick="addToCart('Candy Straight Wig', 274.99, '../assets/pinklace.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/orange.jpg" alt=" orange Wig" />
+                <h3>sunset spiral Wig</h3>
+                <p>Fiery orange curls inspired by sunset hues — full of life, movement, and irresistible energy.</p>
+                <p>$374.99</p>
+                <button class="add-to-cart" onclick="addToCart('Sunset Spiral Wig', 374.99, '../assets/orange.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/afro.jpg" alt=" afro Wig" />
+                <h3>queen kink volume</h3>
+                <p>Unapologetically bold — tight curls with maximum volume for a powerful, queen-like finish.</p>
+                <p>$474.99</p>
+                <button class="add-to-cart" onclick="addToCart('Queen Kink Volume', 474.99, '../assets/afro.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/curly.jpg" alt=" black wave Wig" />
+                <h3>dreamline Wig</h3>
+                <p>Soft waves that flow effortlessly — a dreamy balance between casual chic and glam sophistication.</p>
+                <p>$174.99</p>
+                <button class="add-to-cart" onclick="addToCart('Dreamline Wig', 174.99, '../assets/curly.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/ombre.jpg" alt=" Brown with highlights Wig" />
+                <h3>tropical sunset Wig</h3>
+                <p>
+                    Brown with golden highlights that mimic the warmth of island sunsets — vibrant yet natural
+                    perfection.
+                </p>
+                <p>$374.99</p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Brown with highlights Wig', 374.99, '../assets/ombre.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/blackclo.jpg" alt="Gem Closure" />
+                <h3>Gem Closure</h3>
+                <p>
+                    Add instant shine and volume with our 5x5 jet-black Gem Closure — silky, smooth, and perfect for any
+                    elegant finish.
+                </p>
+                <p>$19.99</p>
+                <button class="add-to-cart" onclick="addToCart('Gem Closure', 19.99, '../assets/blackclo.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/blondclo.jpg" alt="Blonde Radiance Closure" />
+                <h3>Blonde Radiance Closure</h3>
+                <p>
+                    Bright, golden-blonde tones that shine effortlessly — soft, smooth, 13x4 and full of body for a
+                    flawless finish that catches every light.
+                </p>
+                <p>$15.99</p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Blonde Radiance Closure', 15.99, '../assets/blonde.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/purpleclo.jpg" alt="Royal Purple Closure" />
+                <h3>Royal Purple Closure</h3>
+                <p>
+                    Rich, deep purple 4x4 hues that radiate luxury and confidence — silky smooth with a natural shine,
+                    perfect for bold statement looks or elegant glam styles.
+                </p>
+                <p>$14.99</p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Royal Purple Closure', 14.99, '../assets/purpleclo.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/blackclo2.jpg" alt="Onyx Shine Closure" />
+                <h3>Onyx Shine Closure</h3>
+                <p>Glossy black 4x4 with soft texture — bold, striking, and effortlessly chic.</p>
+                <p>$12.99</p>
+                <button class="add-to-cart" onclick="addToCart('Onyx Shine Closure', 12.99, '../assets/blackclo2.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/blondeclo2.jpg" alt=" Champagne Blonde Closure" />
+                <h3>Champagne Blonde Closure</h3>
+                <p>
+                    Smooth, silky strands 4x4 in a soft champagne blonde — natural shine, lightweight, and perfect for a
+                    radiant, everyday glamorous look.
+                </p>
+                <p>$14.99</p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Champagne Blonde Closure', 14.99, '../assets/blondeclo2.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/blackclo4.jpg" alt="Midnight Black Closure" />
+                <h3>Midnight Black Closure</h3>
+                <p>Dark and luxurious 13x4 with natural movement — ideal for a dramatic, sophisticated finish.</p>
+                <p>$14.99</p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Midnight Black Closure', 14.99, '../assets/blackclo4.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/blackclo5.jpg" alt="Body Wave Closure" />
+                <h3>Body Wave Closure</h3>
+                <p>
+                    Soft, flowing 4x4 waves with natural bounce — adds volume and movement for a glamorous everyday
+                    style.
+                </p>
+                <p>$13.99</p>
+                <button class="add-to-cart" onclick="addToCart('Body Wave Closure', 13.99, '../assets/blackclo5.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/orangeclo.jpg" alt="Copper Sunset Closure" />
+                <h3>Copper Sunset Closure</h3>
+                <p>
+                    Rich copper-orange 13x4 strands with subtle shine — elegant, bold, and ideal for glamorous
+                    hairstyles.
+                </p>
+                <p>$14.99</p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Copper Sunset Closure', 14.99, '../assets/orangeclo.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/5in1.jpg" alt="Heikki Vision Curling Iron" />
+                <h3>Heikki Vision 5-in 1 Curling Iron</h3>
+                <p>
+                    Heats Up Instantly: In a hurry and need to get out of the door ASAP. The magic hair styling tool
+                    with PTC heater can get hair dressed in as little as 60s so you can go out of the door in no
+                    time.Easy to Interchange barrels.
+                </p>
+                <p>$59.99</p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Heikki Vision 5-in 1 Curling Iron', 59.99, '../assets/5in1.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/scrunches.jpg" alt="SLIP Pure Silk Skinny Scrunchies" />
+                <h3>SLIP Pure Silk Skinny Scrunchies</h3>
+                <p>Designed to be anti-crease, anti-breakage. Upgrade your hair-tie game.</p>
+                <p>$9.99</p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('SLIP Pure Silk Skinny Scrunchies', 9.99, '../assets/scrunches.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/wigcap.jpg" alt="Wig Cap" />
+                <h3>Wig Cap</h3>
+                <p>2Pcs Women's Brown Wig Cap, Front Lace Wig Stockings Cap, Dark Brown</p>
+                <p>$2.99</p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Crystal Blonde Lace front', 2.99, '../assets/wigcap.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/comb.jpg" alt="10 pcs Comb Set" />
+                <h3>10 pcs Comb Set</h3>
+                <p>
+                    This set includes 10 imitation bone combs, each designed to provide maximum comfort and control
+                    during styling.
+                </p>
+                <p>$5.99</p>
+                <button class="add-to-cart" onclick="addToCart('10 pcs Comb Set', 5.99, '../assets/comb.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/rollers.jpg" alt=" rollers" />
+                <h3>Hair Rollers</h3>
+                <p>
+                    Designed for delivering the perfect curl to your look.They can stay in your hair on their own
+                    without pins. These are perfect for curling your hair overnight if you can sleep with them in.
+                </p>
+                <p>$5.99</p>
+                <button class="add-to-cart" onclick="addToCart('Blonde Faux Locs Wig', 5.99, '../assets/rollers.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/flatiron.jpg" alt=" Flat Iron" />
+                <h3>Flat Iron</h3>
+                <p>
+                    The Petite hair iron features 1-inch wide plates that are perfect for those with medium-thick and
+                    chin to shoulder length hair, locking in style until your next shampoo.
+                </p>
+                <p>$14.99</p>
+                <button class="add-to-cart" onclick="addToCart('Flat Iron', 14.99, '../assets/flatiron.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/wax.jpg" alt="Hair Wax" />
+                <h3>Hair Wax</h3>
+                <p>
+                    Flyaway & frizz control. Hassle-free styling. Clean formula - made with vegan waxes & plant-based
+                    ingredients.
+                </p>
+                <p>$3.99</p>
+                <button class="add-to-cart" onclick="addToCart('Hair Wax', 3.99, '../assets/wax.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/band.jpg" alt=" Lace Band" />
+                <h3>Lace Band</h3>
+                <p>
+                    Use on wigs or natural hair to keep the hairline in tact. It also assists in the melting process of
+                    your lace application. Use nightly to maintain sleek looking edges.
+                </p>
+                <p>$1.99</p>
+                <button class="add-to-cart" onclick="addToCart('Lace Band', 1.99, '../assets/band.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/glue.jpg" alt="Lace Glue" />
+                <h3>Lace Glue</h3>
+                <p>
+                    Keep your wig secure all day with our high-quality lace wig glue. Easy to apply, waterproof & long
+                    lasting.
+                </p>
+                <p>$7.99</p>
+                <button class="add-to-cart" onclick="addToCart('Lace Glue', 7.99, '../assets/glue.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/dryer.jpg" alt="Blow Dryer" />
+                <h3>Blow Dryer</h3>
+                <p>
+                    Elevate your hair care routine with the Conair Hair Dryer, a professional-grade device designed to
+                    deliver salon-quality results.
+                </p>
+                <p>$16.99</p>
+                <button class="add-to-cart" onclick="addToCart('Blow Dryer', 16.99, '../assets/dryer.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+        </section>
+
+        <!--FOOTER-->
+        <footer class="footer">
+            <p>&copy; 2025 HausofHair. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

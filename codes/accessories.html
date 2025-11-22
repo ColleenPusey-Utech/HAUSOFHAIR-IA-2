@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- Ensures proper scaling on mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Website title-->
+        <title>ACCESSORIES</title>
+        <!--Stylesheet-->
+        <link rel="stylesheet" href="../style.css" />
+        <!--JAVASCRIPT FILE-->
+        <script src="../script.js" defer></script>
+        <!-- Google Material Icons (Outlined) -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=person"
+             rel="stylesheet"
+        />
+        <!-- Google Fonts-->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+      <body>
+        <header>
+            <nav>
+                <!-- Logo Section -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../assets/logo.png" alt="Logo" />
+                    </a>
+                </div>
+                <!-- Main Navigation Links -->
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About us</a>
+                    <a href="about.html#contact">Contact</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="shipping.html">Shipping</a>
+                    <!-- Shop Menu With Dropdown -->
+                    <div class="Shop-options">
+                        <!-- Shop Dropdown list -->
+                        <a href="#">Shop &#9662;</a>
+                        <div class="dropdown">
+                            <a href="bundles.html">Bundles</a>
+                            <a href="wig.html">Wigs</a>
+                            <a href="closures.html">Closures</a>
+                            <a href="accessories.html">Accessories</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Icon Section (Profile & Cart) -->
+                <div class="icons">
+                    <!-- User Profile Menu -->
+                    <div class="profile-menu">
+                        <span class="material-icons-outlined" id="profileIcon">person</span>
+                        <!-- Profile dropdown for Login/Register/Logout -->
+                        <div class="dropdown">
+                            <a href="#" id="dropdownLogin">Login</a>
+                            <a href="#" id="dropdownRegister">Register</a>
+                            <span id="userStatus"></span>
+                            <!-- Logout button (hidden until logged in) -->
+                            <button id="logoutBtn" onclick="logoutUser()" style="display: none">Logout</button>
+                        </div>
+                    </div>
+                    <!-- Cart Icon -->
+                    <a href="cart.html" title="View Cart"><span class="material-icons-outlined">shopping_bag</span></a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- PRODUCT SECTION-->
+        <section class="shop-container">
+            <!-- Individual product card -->
+            <div class="product">
+                <!-- Product image -->
+                <img src="../assets/5in1.jpg" alt="Heikki Vision Curling Iron" />
+                <!-- Product name -->
+                <h3>Heikki Vision 5-in 1 Curling Iron</h3>
+                <!-- Product description -->
+                <p>
+                    Heats Up Instantly: In a hurry and need to get out of the door ASAP. The magic hair styling tool
+                    with PTC heater can get hair dressed in as little as 60s so you can go out of the door in no
+                    time.Easy to Interchange barrels.
+                </p>
+                <!-- Product price -->
+                <p><b>$59.99</b></p>
+                 <!-- Add to cart button-->
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Heikki Vision 5-in 1 Curling Iron', 59.99, '../assets/5in1.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/scrunches.jpg" alt="SLIP Pure Silk Skinny Scrunchies" />
+                <h3>SLIP Pure Silk Skinny Scrunchies</h3>
+                <p>Designed to be anti-crease, anti-breakage. Upgrade your hair-tie game.</p>
+                <p><b>$9.99</b></p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('SLIP Pure Silk Skinny Scrunchies', 9.99, '../assets/scrunches.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/wigcap.jpg" alt="Wig Cap" />
+                <h3>Wig Cap</h3>
+                <p>2Pcs Women's Brown Wig Cap, Front Lace Wig Stockings Cap, Dark Brown</p>
+                <p><b>$2.99</b></p>
+                <button
+                    class="add-to-cart"
+                    onclick="addToCart('Crystal Blonde Lace front', 2.99, '../assets/wigcap.jpg')"
+                >
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/comb.jpg" alt="10 pcs Comb Set" />
+                <h3>10 pcs Comb Set</h3>
+                <p>
+                    This set includes 10 imitation bone combs, each designed to provide maximum comfort and control
+                    during styling.
+                </p>
+                <p><b>$5.99</b></p>
+                <button class="add-to-cart" onclick="addToCart('10 pcs Comb Set', 5.99, '../assets/comb.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/rollers.jpg" alt=" rollers" />
+                <h3>Hair Rollers</h3>
+                <p>
+                    Designed for delivering the perfect curl to your look.They can stay in your hair on their own
+                    without pins. These are perfect for curling your hair overnight if you can sleep with them in.
+                </p>
+                <p><b>$5.99</b></p>
+                <button class="add-to-cart" onclick="addToCart('Blonde Faux Locs Wig', 5.99, '../assets/rollers.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/flatiron.jpg" alt=" Flat Iron" />
+                <h3>Flat Iron</h3>
+                <p>
+                    The Petite hair iron features 1-inch wide plates that are perfect for those with medium-thick and
+                    chin to shoulder length hair, locking in style until your next shampoo.
+                </p>
+                <p><b>$14.99</b></p>
+                <button class="add-to-cart" onclick="addToCart('Flat Iron', 14.99, '../assets/flatiron.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/wax.jpg" alt="Hair Wax" />
+                <h3>Hair Wax</h3>
+                <p>
+                    Flyaway & frizz control. Hassle-free styling. Clean formula - made with vegan waxes & plant-based
+                    ingredients.
+                </p>
+                <p><b>$3.99</b></p>
+                <button class="add-to-cart" onclick="addToCart('Hair Wax', 3.99, '../assets/wax.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/band.jpg" alt=" Lace Band" />
+                <h3>Lace Band</h3>
+                <p>
+                    Use on wigs or natural hair to keep the hairline in tact. It also assists in the melting process of
+                    your lace application. Use nightly to maintain sleek looking edges.
+                </p>
+                <p><b>$1.99</b></p>
+                <button class="add-to-cart" onclick="addToCart('Lace Band', 1.99, '../assets/band.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/glue.jpg" alt="Lace Glue" />
+                <h3>Lace Glue</h3>
+                <p>
+                    Keep your wig secure all day with our high-quality lace wig glue. Easy to apply, waterproof & long
+                    lasting.
+                </p>
+                <p><b>$7.99</b></p>
+                <button class="add-to-cart" onclick="addToCart('Lace Glue', 7.99, '../assets/glue.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <img src="../assets/dryer.jpg" alt="Blow Dryer" />
+                <h3>Blow Dryer</h3>
+                <p>
+                    Elevate your hair care routine with the Conair Hair Dryer, a professional-grade device designed to
+                    deliver salon-quality results.
+                </p>
+                <p><b>$16.99</b></p>
+                <button class="add-to-cart" onclick="addToCart('Blow Dryer', 16.99, '../assets/dryer.jpg')">
+                    Add to Cart
+                </button>
+            </div>
+        </section>
+
+        <!--FOOTER-->
+        <footer class="footer">
+            <p>&copy; 2025 HausofHair. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
